@@ -23,8 +23,6 @@ const tabla = document.querySelector("[data-tabla]")
 
 
 
-// 1. crear conexion con xmlhttp
-const http = new XMLHttpRequest();
 
 // abrir http (metodo, url)
 // CRUD -- METODOS HTTP
@@ -33,18 +31,41 @@ const http = new XMLHttpRequest();
 //UPDATE - PUT / PATCH
 //DELETE - DELETE
 
-//2. crear conexion con json 
-http.open("GET", "http://localhost:3000/cliente")
+//8 Para trabajar con promesas debemos llamar a Promise
+const listaClientes = () =>{
+    const promise = new Promise ((resolve, reject) =>{
+        // 1. crear conexion con xmlhttp
+        const http = new XMLHttpRequest();
+        //2. crear conexion con json 
+        http.open("GET", "http://localhost:3000/cliente")
+        //3. funcion de enviar datos
+        http.send()
+        //4 recargar datos de json en consola de Cliente-Servicio
+        http.onload = () =>{
+            const response = JSON.parse(http.response)
+            
+            //9 verificacion si se encuentra un error dentro de lo que obtenemos en json
+            if (http.status >= 400){
+                //tiene algun error
+                reject(response)
+            }else{
+                //se ejecuto satisfactoriamente
+                resolve(response)
+            }
 
-//3. funcion de enviar datos
-http.send()
-
-//4 recargar datos de json en consola de Cliente-Servicio
-http.onload = () =>{
-    const data = JSON.parse(http.response)
-    //7. se recibe los perfiles de cada uno de los clientes en j.son
-    data.forEach( perfil => {
-        const nuevaLinea = crearNuevaLinea(perfil.nombre, perfil.correoElectronico, perfil.edad, perfil.productodeInteres, perfil.recomendacion, perfil.mediodeComunicacion, perfil.queproductoNecesita, perfil.comentarios)
-        tabla.appendChild(nuevaLinea)
-    });
+            //7. se recibe los perfiles de cada uno de los clientes en j.son
+            /* data.forEach( perfil => {
+                const nuevaLinea = crearNuevaLinea(perfil.nombre, perfil.correoElectronico, perfil.edad, perfil.productodeInteres, perfil.recomendacion, perfil.mediodeComunicacion, perfil.queproductoNecesita, perfil.comentarios)
+                tabla.appendChild(nuevaLinea)
+            });*/
+        }
+    })
+    return promise
 }
+
+
+//7. se recibe los perfiles de cada uno de los clientes en j.son
+data.forEach( perfil => {
+    const nuevaLinea = crearNuevaLinea(perfil.nombre, perfil.correoElectronico, perfil.edad, perfil.productodeInteres, perfil.recomendacion, perfil.mediodeComunicacion, perfil.queproductoNecesita, perfil.comentarios)
+    tabla.appendChild(nuevaLinea)
+});

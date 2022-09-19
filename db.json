@@ -2,13 +2,23 @@
     "cliente":[
         {
             "nombre": "alejo",
-            "correoElectronico": "salasruiz@gmail.comentarios",
+            "correoElectronico": "salasruiz@gmail",
             "edad": "32",
             "productodeInteres": "multitomas",
             "recomendacion": "quizas",
             "mediodeComunicacion":"correo Electronico",
             "queproductoNecesita": "bombillos",
             "comentarios": "buen servicio"
+        },
+        {
+            "nombre": "samuel",
+            "correoElectronico": "samu@gmail",
+            "edad": "10",
+            "productodeInteres": "multitomas",
+            "recomendacion": "quizas",
+            "mediodeComunicacion":"correo Electronico",
+            "queproductoNecesita": "bombillos",
+            "comentarios": "mal servicio"
         }
     ]
 }
