@@ -64,8 +64,13 @@ const listaClientes = () =>{
 }
 
 
-//7. se recibe los perfiles de cada uno de los clientes en j.son
-data.forEach( perfil => {
-    const nuevaLinea = crearNuevaLinea(perfil.nombre, perfil.correoElectronico, perfil.edad, perfil.productodeInteres, perfil.recomendacion, perfil.mediodeComunicacion, perfil.queproductoNecesita, perfil.comentarios)
-    tabla.appendChild(nuevaLinea)
-});
+listaClientes().then((data) =>{
+    //7. se recibe los perfiles de cada uno de los clientes en j.son
+    data.forEach( perfil => {
+        const nuevaLinea = crearNuevaLinea(perfil.nombre, perfil.correoElectronico, perfil.edad, perfil.productodeInteres, perfil.recomendacion, perfil.mediodeComunicacion, perfil.queproductoNecesita, perfil.comentarios)
+        tabla.appendChild(nuevaLinea)
+    });
+}).catch((error) => alert("Ocurrio un error"))
+    
+
+
