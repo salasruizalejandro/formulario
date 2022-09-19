@@ -1,0 +1,14 @@
+{
+    "cliente":[
+        {
+            "nombre": "alejo",
+            "correoElectronico": "salasruiz@gmail.comentarios",
+            "edad": "32",
+            "productodeInteres": "multitomas",
+            "recomendacion": "quizas",
+            "mediodeComunicacion":"correo Electronico",
+            "queproductoNecesita": "bombillos",
+            "comentarios": "buen servicio"
+        }
+    ]
+}
