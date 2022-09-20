@@ -1,3 +1,11 @@
+
+
+// importar ListaClientes
+import { clienteServices } from "../service/client-service.js"
+
+console.log(clienteServices)
+
+
 //funcion crear nueva linea donde se incluye los datos al html
 const crearNuevaLinea = (nombre, correoElectronico, edad, productodeInteres, recomendacion, mediodeComunicacion, queproductoNecesita, comentarios) =>{
     const linea = document.createElement("div");
@@ -23,7 +31,7 @@ const crearNuevaLinea = (nombre, correoElectronico, edad, productodeInteres, rec
 const tabla = document.querySelector("[data-tabla]")
 
 //se recibe los perfiles de cada uno de los clientes en j.son
-listaClientes().then((data) =>{
+clienteServices.listaClientes().then((data) =>{
     data.forEach( perfil => {
         const nuevaLinea = crearNuevaLinea(perfil.nombre, perfil.correoElectronico, perfil.edad, perfil.productodeInteres, perfil.recomendacion, perfil.mediodeComunicacion, perfil.queproductoNecesita, perfil.comentarios)
         tabla.appendChild(nuevaLinea)

@@ -9,7 +9,9 @@
 const listaClientes = () =>  fetch("http://localhost:3000/cliente").then((respuesta) => respuesta.json());
 
 
-
+export const clienteServices = {
+    listaClientes,
+};
 
     
 
