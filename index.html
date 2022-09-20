@@ -14,23 +14,23 @@
             <h1 id="title" class="text-center">Formulario de Contacto</h1>
             <p id="description" class="description text-center">Gracias por tomarse un tiempo en llenar el formulario.</p>
           </header>
-          <form id="survey-form">
+          <form id="survey-form" data-tabla>
             <div class="form-group">
               <label id="name-label" for="name">Nombre</label>
-              <input type="text" name="name" id="name" class="form-control" placeholder="Entribe su nombre" required/>
+              <input data-nombre type="text" name="name" id="name" class="form-control" placeholder="Entribe su nombre" required />
             </div>
             <div class="form-group">
               <label id="email-label" for="email">Correo Electronico</label>
-              <input type="email" name="email" id="email" class="form-control" placeholder="Escribe tu Email" required/>
+              <input data-email type="email" name="email" id="email" class="form-control" placeholder="Escribe tu Email" required/>
             </div>
             <div class="form-group">
               <label id="number-label" for="number">Edad<span class="clue">(opcional)</span></label>
-              <input type="number" name="age" id="number" min="10" max="99" class="form-control" placeholder="Edad"/>
+              <input data-edad type="number" name="age" id="number" min="10" max="99" class="form-control" placeholder="Edad"/>
             </div>
             <div class="form-group">
               <p>Cual es el producto por el cual se encuentra interesado</p>
-              <select id="dropdown" name="role" class="form-control" required>
-                <option value="">Illuminacion</option>
+              <select data-opcionesInteres id="dropdown" name="role" class="form-control" required>
+                <option value="">Selccione una Opcion</option>
                 <option value="cables-carga">cables de carga</option>
                 <option value="cargadores">cargadores</option>
                 <option value="multitomas">multitomas</option>
@@ -40,18 +40,18 @@
             <div class="for-group">
               <p>Gustaria recomendar Data a un amigo?</p>
               <label>
-                <input name="user-recommend" value="Definitivamente" type="radio" class="input-radio" checked/>Definitivamente
+                <input data-Definitivamente name="user-recommend" value="Definitivamente" type="radio" class="input-radio" checked/>Definitivamente
               </label>
               <label>
-                <input name="user-recommend" value="Quizàs" type="radio" class="input-radio" checked/>Quizàs
+                <input data-Quizas name="user-recommend" value="Quizàs" type="radio" class="input-radio" checked/>Quizàs
               </label>
               <label>
-                <input name="user-recommend" value="No estoy seguro" type="radio" class="input-radio" checked/>No estoy seguro
+                <input data-NoestoySeguro name="user-recommend" value="No estoy seguro" type="radio" class="input-radio" checked/>No estoy seguro
               </label>
             </div>
             <div class="form-group">
               <p>¿Por qué medio te gustaría tener información de nosotros? </p>
-              <select name="mostlike" id="most-like" class="form-control" required >
+              <select data-InformacionNosotros name="mostlike" id="most-like" class="form-control" required >
                 <option disabled selected value>Seleccione una Opcion</option>
                 <option value="Llamada">Llamada</option>
                 <option value="Correo-directo">Correo Electronico</option>
@@ -83,14 +83,14 @@
             </div>
             <div class="form-group">
               <p>Tienes algun comentario para nosotros?</p>
-              <textarea id="comments" class="input-textarea" name="comment" placeholder="Ingresa tus comentarios.">
+              <textarea data-comentarioParaNosotros id="comments" class="input-textarea" name="comment" placeholder="Ingresa tus comentarios.">
               </textarea>              
             </div>
             <div class="form-group">
               <button type="submit" id="submit" class="submit-button"> Enviar. </button>
             </div>
           </form>
-          <div class="clientes" data-tabla>
+          <div class="clientes">
        <!-- <h3>NumeroCliente</h3>
             <h3>Nombre</h3>
             <h3>correo electronico</h3>

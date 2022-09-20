@@ -5,9 +5,7 @@
             "correoElectronico": "salasruiz@gmail",
             "edad": "32",
             "productodeInteres": "multitomas",
-            "recomendacion": "quizas",
             "mediodeComunicacion":"correo Electronico",
-            "queproductoNecesita": "bombillos",
             "comentarios": "buen servicio"
         },
         {
@@ -15,10 +13,10 @@
             "correoElectronico": "samu@gmail",
             "edad": "10",
             "productodeInteres": "multitomas",
-            "recomendacion": "quizas",
             "mediodeComunicacion":"correo Electronico",
-            "queproductoNecesita": "bombillos",
             "comentarios": "mal servicio"
         }
     ]
 }
+            
+            
